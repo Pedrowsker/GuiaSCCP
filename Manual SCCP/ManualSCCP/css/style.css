@@ -1,0 +1,910 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+     z-index: 1000; /* ou outro valor alto */
+    background-color: rgb(15, 15, 15);
+    position: fixed;
+    height: 18%;
+    width: 100%;
+    display: flex;             
+    flex-direction:row;      
+    align-items: center;         
+    justify-content: center;    
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.452);
+    max-height: 18%; 
+    
+}
+
+.headerb {
+    width: 100%;   /* largura da logo */
+    height: auto;  /* mantém proporção */
+    margin-top: 30px; /* separa logo dos links */
+   
+}
+
+.logo {
+     position:absolute;
+    width: 22.3%;   /* largura da logo */
+
+   
+}
+
+.box a:hover{
+    color: rgb(255, 0, 0);
+    transition: 0.3s;    
+   
+}
+
+
+.box {
+    font-family: "Zen Dots", sans-serif;
+    background-color: rgba(0, 0, 0, 0.897);
+    width: 55%;
+    height: 15%;
+    position:absolute ;
+    top: 43.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Centralização do conteúdo */
+    display: flex;
+    align-items: center;   /* alinha verticalmente */
+    justify-content: center; /* alinha horizontalmente */
+    box-shadow: 0px -0px 20px rgb(0, 0, 0);
+}
+
+.box a {
+    display: inline-block;   /* permite que fiquem lado a lado */
+    color: #fff;
+    font-weight: 500%;
+    font-size: 125%;
+    text-decoration: none;
+    margin: 0 3%;         /* espaço horizontal entre os links */
+    transition: 0.3s;    
+    
+    
+}
+
+.box a.active {
+    text-decoration:underline;
+    text-decoration-color: rgb(255, 0, 0);
+    
+}
+
+.box2{
+    background-image: url('../img/loucos.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.397);
+    background-blend-mode: darken;
+    width: 80%;
+    height: 300px;
+    position: relative;
+    top: 220px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box2 b{
+    font-family: "Zen Dots", sans-serif;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+/* agora o <p> pode ser movido independente */
+.box2 p{
+    position: absolute;
+    bottom: 36%;   /* distancia do fundo */
+    left: 31%;
+    transform: translateX(-50%); /* centraliza horizontalmente */
+    font-family: "Zen Dots", sans-serif;
+    color: #fff;
+    font-size: 14px;
+    font-weight:lighter;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+
+.box3{
+   background-color: rgb(0, 0, 0);
+    width: 80%;
+    height: 100px;
+    position:relative;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Centralização do conteúdo */
+    display: flex;
+    align-items: center;   /* alinha verticalmente */
+    justify-content: center; /* alinha horizontalmente */
+    
+}
+
+.box3 b{
+    font-family: "Zen Dots", sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight:bold;
+    
+}
+
+.box7{
+   background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 400px;
+    position:relative;
+    top: 340px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Centralização do conteúdo */
+    display: flex;
+    align-items:flex-start;   /* alinha verticalmente */
+    justify-content: center; /* alinha horizontalmente */
+    padding-top: 35px;  
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 20px;
+    
+}
+
+
+.box7 b{
+    font-family: "Zen Dots", sans-serif;
+    color: #000000;
+    font-size: 25px;
+    font-weight:100;
+    width: 85%;
+    text-align: center;
+}
+
+.btn {
+    background-image: url('../img/yuri.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:color-burn;
+    font-family: "Zen Dots", sans-serif;
+    font-size: 22px;
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.7s ease;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30%;
+    width: 40%;
+    display: flex;              /* flexbox deixa o alinhamento mais fácil */
+    align-items: center;        /* centraliza verticalmente */
+    justify-content: center; 
+
+}
+
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.237);
+    
+    box-shadow: 0 0 15px black;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.box4{
+   background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 300px;
+    position:relative;
+    top: 440px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Centralização do conteúdo */
+    display: flex;
+    align-items: center;   /* alinha verticalmente */
+    justify-content: center; /* alinha horizontalmente */
+    
+}
+
+.box4 b{
+     font-family: "Zen Dots", sans-serif;
+    color: #000000;
+    font-size: 30px;
+    font-weight:bold
+    
+}
+
+.conq {
+    display: block;
+    margin: 5% auto;
+    width: 60%;   /* largura da logo */
+    height: auto;  /* mantém proporção */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.555);
+}
+
+.box5{
+    background-image: url('../img/campeão.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.397);
+    background-blend-mode: darken;
+    width: 80%;
+    height: 300px;
+    position: relative;
+    top: 220px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box5 b{
+    font-family: "Zen Dots", sans-serif;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.box6{
+    background-image: url('../img/yurime.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.397);
+    background-blend-mode: darken;
+    width: 80%;
+    height: 300px;
+    position: relative;
+    top: 220px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box6 b{
+    font-family: "Zen Dots", sans-serif;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+/* Box do formulário */
+/* Box do formulário */
+.boxForm {
+    background-color: rgb(17, 17, 17);
+    width: 30%;
+    max-width: 600px;
+    padding: 30px;
+    margin: 23% 50%; /* margem pra não ficar colado no topo */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* garante que não fique fora da tela */
+    z-index: 10; /* fica acima de outros elementos */
+}
+
+/* Input de texto */
+.boxForm input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+/* Botão */
+.boxForm button {
+    padding: 12px 25px;
+    background: #e60000;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Zen Dots", sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boxForm button:hover {
+    background: #a30000;  
+}
+
+.volt {
+    height: 70px;
+    width: 40%;
+    padding: 12px 25px;
+    background: #e60000;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Zen Dots", sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 100px auto;
+    display: block;
+    font-size:larger;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.volt:hover {
+     background: #a30000; 
+}
+
+.box8{
+   background-color: rgb(0, 0, 0);
+    width: 80%;
+    height: 100px;
+    position:relative;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Centralização do conteúdo */
+    display: flex;
+    align-items: center;   /* alinha verticalmente */
+    justify-content: center; /* alinha horizontalmente */
+    scroll-margin-top: 180px;
+    
+}
+
+.box8 b{
+    font-family: "Zen Dots", sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight:bold;
+    
+}
+
+.box9 {
+    width: 80%;               
+    margin: 160px auto;        
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;          
+    display: flex;
+    flex-direction: column;    
+    gap: 15px;                 
+}
+
+/* parágrafos padrão */
+.box9 .p-padrao {
+    font-size: 23px;
+    color: #202020;
+    width: 60%;
+    padding-left: 1%;
+}
+
+/* parágrafos mais largos */
+.box9 .p-largo {
+    font-size: 23px;
+    color: #202020;
+    width: 97%;   /* mais horizontal */
+    padding-left: 1%;
+}
+
+/* destaques */
+.box9 .destaque {
+    font-weight: bold;
+    font-size: 20px;
+    color: #111;
+}
+
+/* lista */
+.box9 ul {
+    margin: 0;
+    padding-left: 3%;
+}
+.box9 ul li {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+/* frase histórica */
+.box9 blockquote {
+    font-size: 20px;
+    font-style: italic;
+    color: #555;
+    border-left: 3px solid #000;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.fund {
+    position:absolute;
+    width: 28%;
+    margin-left: 48%;
+    margin-top: 17%;
+}
+
+
+.box10{
+   background-color: rgb(0, 0, 0);
+    width: 80%;
+    height: 100px;
+    position:relative;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Centralização do conteúdo */
+    display: flex;
+    align-items: center;   /* alinha verticalmente */
+    justify-content: center; /* alinha horizontalmente */
+    scroll-margin-top: 180px;
+    
+}
+
+.box10 b{
+    font-family: "Zen Dots", sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight:bold;
+    
+}
+
+.box11 {
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    position: relative;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%); /* centraliza horizontalmente */
+    
+    /* Removido flexbox para textos ficarem em coluna */
+    padding: 35px 30px;     /* espaçamento interno */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    height: auto;           /* ajusta altura conforme conteúdo */
+       /* cantos arredondados */
+}
+
+/* Título do capítulo */
+.box11 b {
+    font-family: "Zen Dots", sans-serif;
+    color: #000000;
+    font-size: 25px;
+    font-weight: 100;
+    display: block;         /* garante que fique em linha própria */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;    /* espaço abaixo do título */
+}
+
+/* Parágrafos longos */
+.box11 p.p-largo {
+    font-size: 23px;
+    line-height: 1.8;
+    margin-bottom: 20px;    /* espaçamento entre parágrafos */
+    text-align: justify;     /* alinhamento tipo livro */
+}
+
+/* Palavras/datas em destaque */
+.box11 .destaque {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Box do título (Capítulo 3) */
+.box12 {
+    background-color: rgb(0, 0, 0);
+    width: 80%;
+    height: 100px;
+    position: relative;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-margin-top: 180px;
+}
+
+.box12 b {
+    font-family: "Zen Dots", sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Box do conteúdo (Capítulo 3) */
+.box13 {
+    width: 80%;               
+    margin: 100px auto;        
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;          
+    display: flex;
+    flex-direction: column;    
+    gap: 15px;                 
+}
+
+/* parágrafos padrão */
+.box13 .p-padrao {
+    font-size: 23px;
+    color: #202020;
+    width: 90%;
+    padding-left: 1%;
+}
+
+/* parágrafos mais largos */
+.box13 .p-largo {
+    font-size: 23px;
+    color: #202020;
+    width: 97%;
+    padding-left: 1%;
+}
+
+/* destaques */
+.box13 .destaque {
+    font-weight: bold;
+    font-size: 23px;
+    color: #111;
+}
+
+/* lista */
+.box13 ul {
+    margin: 0;
+    padding-left: 3%;
+}
+.box13 ul li {
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+
+/* frase histórica */
+.box13 blockquote {
+    font-size: 23px;
+    font-style: italic;
+    color: #555;
+    border-left: 3px solid #000;
+    padding-left: 10px;
+    margin: 0;
+}
+
+
+/* Box do título do capítulo 4 */
+.box14 {
+    background-color: rgb(0, 0, 0);
+    width: 80%;
+    height: 100px;
+    position: relative;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Centralização do conteúdo */
+    display: flex;
+    align-items: center;   /* alinha verticalmente */
+    justify-content: center; /* alinha horizontalmente */
+    scroll-margin-top: 180px;
+}
+
+.box14 b {
+    font-family: "Zen Dots", sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Box do conteúdo do capítulo 4 */
+.box15 {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* parágrafos padrão */
+.box15 .p-padrao {
+    font-size: 23px;
+    color: #202020;
+    width: 55%;
+    padding-left: 1%;
+}
+
+/* parágrafos mais largos */
+.box15 .p-largo {
+    font-size: 23px;
+    color: #202020;
+    width: 97%; /* mais horizontal */
+    padding-left: 1%;
+}
+
+/* destaques */
+.box15 .destaque {
+    font-weight: bold;
+    font-size: 23px;
+    color: #111;
+}
+
+/* lista */
+.box15 ul {
+    margin: 0;
+    padding-left: 3%;
+}
+.box15 ul li {
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+
+/* frase histórica */
+.box15 blockquote {
+    font-size: 23px;
+    font-style: italic;
+    color: #555;
+    border-left: 3px solid #000;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.box16 {
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+
+/* Box do título do Capítulo 5 */
+.box17 {
+   background-color: rgb(0, 0, 0);
+    width: 80%;
+    height: 100px;
+    position: relative;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Centralização do conteúdo */
+    display: flex;
+    align-items: center;   /* alinha verticalmente */
+    justify-content: center; /* alinha horizontalmente */
+    scroll-margin-top: 180px;
+}
+
+.box17 b {
+    font-family: "Zen Dots", sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+/* Box do texto do Capítulo 5 */
+.box18 {
+    width: 80%;               
+    margin: 100px auto;        
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;          
+    display: flex;
+    flex-direction: column;    
+    gap: 15px;                 
+}
+
+/* parágrafos padrão */
+.box18 .p-padrao {
+    font-size: 23px;
+    color: #202020;
+    width: 60%;
+    padding-left: 1%;
+}
+
+/* parágrafos mais largos */
+.box18 .p-largo {
+    font-size: 23px;
+    color: #202020;
+    width: 97%;   /* mais horizontal */
+    padding-left: 1%;
+}
+
+/* destaques */
+.box18 .destaque {
+    font-weight: bold;
+    font-size: 20px;
+    color: #111;
+}
+
+/* lista */
+.box18 ul {
+    margin: 0;
+    padding-left: 3%;
+}
+.box18 ul li {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+/* frase histórica */
+.box18 blockquote {
+    font-size: 20px;
+    font-style: italic;
+    color: #555;
+    border-left: 3px solid #000;
+    padding-left: 10px;
+    margin: 0;
+}
+
+
+/* Abas */
+.timeline {
+  position: fixed;
+  top: 200px;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+  transition: 0.7s ease;
+}
+
+/* ABA (colapsada -> expandida por max-width) */
+.timeline a {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  display: inline-flex;
+  align-items: center;         /* conteúdo alinhado horizontalmente */
+  height: 50px;                /* altura da aba */
+  background: #e2e2e2;
+  color: #000;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  border-radius: 0 20px 0px 0;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.568);
+  padding: 8px;                /* padding interno */
+  box-sizing: border-box;
+  overflow: hidden;            /* esconde o texto antes da expansão */
+  white-space: nowrap;
+  max-width: 60px;             /* largura colapsada (mostra só o número) */
+  transition: max-width 0.7s cubic-bezier(.2,.7,.2,1),
+              background-color 0.7s ease,
+              color 0.7s ease,
+              box-shadow 0.7s ease;
+transition: 0.7s ease;
+}
+
+/* Caixa que segura o número (número fica embaixo dentro dessa caixa) */
+.timeline a .box-num {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;  /* número "grudado" no bottom da aba */
+  width: 44px;                 /* largura reservada para o número */
+  height: 100%;
+  flex: 0 0 44px;             /* não encolhe/expande ao mostrar o nome */
+  text-align: center;
+  transition: 0.7s ease;
+}
+
+/* Estilo do número */
+.timeline a .num {
+  display: block;
+  margin-bottom: 6px;         /* "gruda" embaixo */
+  font-weight: 700;
+  font-size: 18px;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Nome do capítulo (invisível no estado colapsado) */
+.timeline a .nome {
+  display: inline-block;
+  margin-left: 10px;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* HOVER / ACTIVE: expande (max-width) e revela o nome */
+.timeline a:hover,
+.timeline a.active {
+  background: #000;
+  color: #fff;
+  /* max-width grande o suficiente para caber o texto, porém responsivo */
+  max-width: min(48ch, calc(100vw - 120px)); 
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transition: 0.7s ease;
+  border-radius: 0 0 0 0;
+}
+
+
+.timeline a:hover .nome,
+.timeline a.active .nome {
+  opacity: 1;
+  transform: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cort{
+    width:80%;
+    align-content: center;
+    display:flex;
+    position: relative;
+    
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.basilio{
+    width:80%;
+    align-content: center;
+    display:flex;
+    position: relative;
+    
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fazendinha{
+    width:80%;
+    align-content: center;
+    display:flex;
+    position: relative;
+    
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.demo {
+    position: absolute;
+    width: 25%;
+    margin-left: 47%;
+    margin-top: 21.5%;
+}
+
+.cop {
+    position: absolute;
+    width: 25%;
+    margin-left: 47%;
+    margin-top: 53%;
+    transform: scale(1.0);
+    transition: 0.3s;
+}
+
+
+
+
