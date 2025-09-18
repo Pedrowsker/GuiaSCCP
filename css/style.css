@@ -921,6 +921,19 @@ html {
     margin: 10px auto;
   }
 
+
+ .box9 .destaque,
+ .box11 .destaque,
+ .box13 .destaque,
+ .box15 .destaque,
+ .box16 .destaque,
+ .box18 .destaque {
+    font-weight: bold;
+    font-size: 16px; /* diminua aqui para o tamanho desejado */
+    color: #111;
+}
+
+
   .box {
     position: relative;
     top: auto;
@@ -1033,5 +1046,25 @@ html {
   .timeline {
     display: none;
   }
+
+  .box9 blockquote,
+.box11 blockquote,
+.box13 blockquote,
+.box15 blockquote,
+.box16 blockquote,
+.box18 blockquote {
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+    border-left: 3px solid #000;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.box9 ul li {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
 }
 
