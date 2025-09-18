@@ -1048,22 +1048,77 @@ html {
   }
 
   .box9 blockquote,
-.box11 blockquote,
-.box13 blockquote,
-.box15 blockquote,
-.box16 blockquote,
-.box18 blockquote {
+    .box11 blockquote,
+    .box13 blockquote,
+    .box15 blockquote,
+    .box16 blockquote,
+    .box18 blockquote {
     font-size: 16px;
     font-style: italic;
     color: #555;
     border-left: 3px solid #000;
     padding-left: 10px;
     margin: 0;
-}
+    }
 
-.box9 ul li {
+    .box9 ul li {
     font-size: 16px;
     margin-bottom: 4px;
+    }
+
+    #menuToggle {
+    display: none;
+}
+
+/* BOTÃO HAMBÚRGUER */
+#menuBtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2000;
+    color: #fff;
+}
+
+/* MENU LATERAL */
+#sideMenu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* escondido inicialmente */
+    width: 250px;
+    height: 100%;
+    background-color: #0f0f0f;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1500;
+}
+
+/* LINKS DO MENU */
+#sideMenu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-family: "Zen Dots", sans-serif;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+#sideMenu a:hover {
+    background-color: #e60000;
+}
+
+/* ABRIR O MENU QUANDO O CHECKBOX ESTÁ MARCADO */
+#menuToggle:checked ~ #sideMenu {
+    left: 0;
+}
+
+/* OPCIONAL: animação do ícone hambúrguer */
+#menuToggle:checked + #menuBtn {
+    color: #e60000;
 }
 
 }
