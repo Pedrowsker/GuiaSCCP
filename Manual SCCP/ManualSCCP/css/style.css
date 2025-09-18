@@ -474,9 +474,8 @@ header {
     background-color: rgb(255, 255, 255);
     width: 80%;
     position: relative;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%); /* centraliza horizontalmente */
+    top: 0;             /* ajuste se quiser subir/baixo */
+    margin: 30px auto;  /* centraliza horizontalmente e dá espaço em cima */
     
     /* Removido flexbox para textos ficarem em coluna */
     padding: 35px 30px;     /* espaçamento interno */
@@ -915,11 +914,25 @@ html {
     text-align: center;
   }
 
+  
+
   .logo {
     position: relative;
     width: 50%;
     margin: 10px auto;
   }
+
+  .box {
+        display: none;
+    }
+
+  .headerb {
+    width: 100%;
+    height: auto;
+    position: relative; /* mantém o fluxo do layout */
+    top: 65px;         /* desloca somente o headerb para baixo */
+}
+
 
 
  .box9 .destaque,
@@ -951,17 +964,30 @@ html {
   }
 
   /* Títulos das boxes */
-  .box2, .box3, .box4, .box5, .box6,
-  .box7, .box8, .box10, .box12, .box14, .box17 {
+  .box2, .box3, .box4, .box5, .box7, .box8, .box10, .box12, .box14, .box17 {
     width: 95%;
     height: auto;
     top: auto;
     left: auto;
     transform: none;
-    margin: 30px auto;
+    margin: 50px auto 30px auto; /* <--- aqui, 150px para descer abaixo do header */
     padding: 20px 10px;
     text-align: center;
-  }
+}
+
+
+.box6{
+   width: 100%;
+    height: auto;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 100px auto 0px auto; /* <--- aqui, 150px para descer abaixo do header */
+    padding: 20px 10px;
+    text-align: center;
+  
+}
+
 
   .box2 b, .box3 b, .box4 b, .box5 b, .box6 b,
   .box7 b, .box8 b, .box10 b, .box12 b, .box14 b, .box17 b {
@@ -1030,7 +1056,7 @@ html {
 
   /* Imagens especiais */
   .conq, .fund, .demo, .cop, .cort, .basilio, .fazendinha {
-    width: 90%;
+    width: 100%;
     margin: 20px auto;
     position: relative;
     left: auto;
@@ -1039,13 +1065,25 @@ html {
 
   .fund, .demo, .cop {
     margin: 20px auto;
-    width: 60%;
+    width: 100%;
   }
 
   /* Timeline lateral (esconde no celular pra não atrapalhar) */
   .timeline {
     display: none;
   }
+
+
+  /* Boxes de títulos */
+.box8,.box10,.box12, .box14, .box17 {
+    margin-bottom: 10px; /* diminui o espaço abaixo do título */
+}
+
+/* Boxes de conteúdo */
+.box9,.box11, .box13, .box15, .box18 {
+    margin-top: 0; /* remove espaço extra acima do conteúdo */
+}
+
 
   .box9 blockquote,
     .box11 blockquote,
@@ -1073,7 +1111,7 @@ html {
 /* BOTÃO HAMBÚRGUER */
 #menuBtn {
     position: fixed;
-    top: 20px;
+    top: 30px;
     left: 20px;
     font-size: 30px;
     cursor: pointer;
@@ -1099,9 +1137,10 @@ html {
 
 /* LINKS DO MENU */
 #sideMenu a {
+    margin-top: 30px;
     color: #fff;
     text-decoration: none;
-    padding: 15px 25px;
+    padding-left: 25px;
     font-family: "Zen Dots", sans-serif;
     font-size: 18px;
     transition: background 0.3s;
