@@ -905,6 +905,148 @@ html {
     transition: 0.3s;
 }
 
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 1024px) {
+  header {
+    height: 12%;
+  }
 
+  .logo {
+    width: 35%; /* logo menor em tablets */
+  }
 
+  .box {
+    width: 85%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .box a {
+    font-size: 100%;
+    margin: 0 2%;
+  }
+
+  .box2, .box3, .box5, .box6 {
+    width: 90%;
+    height: 220px;
+  }
+
+  .box7 b, 
+  .box11 p.p-largo, 
+  .box13 .p-largo, 
+  .box15 .p-largo, 
+  .box18 .p-largo {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .logo {
+    position: static;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .box {
+    flex-direction: column;
+    width: 95%;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 10px auto;
+  }
+
+  .box a {
+    font-size: 18px;
+    margin: 8px 0;
+  }
+
+  .box2, .box3, .box5, .box6, .box7, .box9, .box11, .box13, .box15, .box18 {
+    width: 95%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .box2 b, .box3 b, .box5 b, .box6 b {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .box7 b, 
+  .box9 .p-padrao,
+  .box11 p.p-largo,
+  .box13 .p-largo,
+  .box15 .p-largo,
+  .box18 .p-largo {
+    font-size: 16px;
+    width: 100%;
+    text-align: justify;
+  }
+
+  .conq,
+  .cort,
+  .basilio,
+  .fazendinha,
+  .fund,
+  .demo,
+  .cop {
+    width: 100%;
+    margin: 10px 0;
+    position: static;
+    transform: none;
+  }
+
+  .timeline {
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    padding: 5px 0;
+  }
+
+  .timeline a {
+    max-width: none;
+    height: auto;
+    border-radius: 0;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .timeline a .nome {
+    opacity: 1;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box a {
+    font-size: 16px;
+  }
+
+  .box2 b, .box3 b, .box5 b, .box6 b {
+    font-size: 18px;
+  }
+
+  .box7 b, 
+  .box9 .p-padrao,
+  .box11 p.p-largo,
+  .box13 .p-largo,
+  .box15 .p-largo,
+  .box18 .p-largo {
+    font-size: 14px;
+  }
+
+  .timeline a .nome {
+    display: none; /* no celular pequeno só mostra número */
+  }
+}
 
