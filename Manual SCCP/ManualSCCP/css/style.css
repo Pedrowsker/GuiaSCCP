@@ -905,215 +905,133 @@ html {
     transition: 0.3s;
 }
 
-/* --- RESPONSIVIDADE --- */
-@media (max-width: 1024px) {
+/* --- Responsividade para CELULARES --- */
+@media only screen and (max-width: 768px) {
+
   header {
-    height: 12%;
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
   }
 
   .logo {
-    width: 35%; /* logo menor em tablets */
+    position: relative;
+    width: 50%;
+    margin: 10px auto;
   }
 
   .box {
-    width: 85%;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 95%;
     height: auto;
+    flex-direction: column;
     padding: 10px;
   }
 
   .box a {
-    font-size: 100%;
-    margin: 0 2%;
-  }
-
-  .box2, .box3, .box5, .box6 {
-    width: 90%;
-    height: 220px;
-  }
-
-  .box7 b, 
-  .box11 p.p-largo, 
-  .box13 .p-largo, 
-  .box15 .p-largo, 
-  .box18 .p-largo {
+    margin: 10px 0;
     font-size: 18px;
   }
-}
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
-  }
-
-  .logo {
-    position: static;
-    width: 50%;
-    margin: 0 auto;
-  }
-
-  .box {
-    flex-direction: column;
+  /* Títulos das boxes */
+  .box2, .box3, .box4, .box5, .box6,
+  .box7, .box8, .box10, .box12, .box14, .box17 {
     width: 95%;
+    height: auto;
     top: auto;
     left: auto;
     transform: none;
-    margin: 10px auto;
-  }
-
-  .box a {
-    font-size: 18px;
-    margin: 8px 0;
-  }
-
-  .box2, .box3, .box5, .box6, .box7, .box9, .box11, .box13, .box15, .box18 {
-    width: 95%;
-    height: auto;
-    margin: 20px auto;
-  }
-
-  .box2 b, .box3 b, .box5 b, .box6 b {
-    font-size: 22px;
+    margin: 30px auto;
+    padding: 20px 10px;
     text-align: center;
   }
 
-  .box7 b, 
+  .box2 b, .box3 b, .box4 b, .box5 b, .box6 b,
+  .box7 b, .box8 b, .box10 b, .box12 b, .box14 b, .box17 b {
+    font-size: 20px;
+  }
+
+  .box2 p {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* Botão */
+  .btn {
+    width: 80%;
+    height: auto;
+    font-size: 18px;
+    padding: 12px;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 20px auto;
+    position: relative;
+  }
+
+  /* Box de texto */
+  .box9, .box11, .box13, .box15, .box16, .box18 {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
   .box9 .p-padrao,
-  .box11 p.p-largo,
+  .box11 .p-largo,
+  .box13 .p-padrao,
+  .box15 .p-padrao,
+  .box18 .p-padrao,
+  .box9 .p-largo,
   .box13 .p-largo,
   .box15 .p-largo,
   .box18 .p-largo {
-    font-size: 16px;
     width: 100%;
-    text-align: justify;
+    font-size: 16px;
+    padding-left: 0;
   }
 
-  .conq,
-  .cort,
-  .basilio,
-  .fazendinha,
-  .fund,
-  .demo,
-  .cop {
+  /* Formulário */
+  .boxForm {
+    width: 90%;
+    margin: 50px auto;
+    position: relative;
+  }
+
+  .boxForm input {
+    font-size: 14px;
+  }
+
+  .boxForm button {
+    font-size: 14px;
     width: 100%;
-    margin: 10px 0;
-    position: static;
+  }
+
+  /* Imagens especiais */
+  .conq, .fund, .demo, .cop, .cort, .basilio, .fazendinha {
+    width: 90%;
+    margin: 20px auto;
+    position: relative;
+    left: auto;
     transform: none;
   }
 
+  .fund, .demo, .cop {
+    margin: 20px auto;
+    width: 60%;
+  }
+
+  /* Timeline lateral (esconde no celular pra não atrapalhar) */
   .timeline {
-    top: auto;
-    bottom: 0;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    background: rgba(0,0,0,0.8);
-    padding: 5px 0;
+    display: none;
   }
-
-  .timeline a {
-    max-width: none;
-    height: auto;
-    border-radius: 0;
-    flex: 1;
-    justify-content: center;
-  }
-
-  .timeline a .nome {
-    opacity: 1;
-    margin-left: 5px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .box a {
-    font-size: 16px;
-  }
-
-  .box2 b, .box3 b, .box5 b, .box6 b {
-    font-size: 18px;
-  }
-
-  .box7 b, 
-  .box9 .p-padrao,
-  .box11 p.p-largo,
-  .box13 .p-largo,
-  .box15 .p-largo,
-  .box18 .p-largo {
-    font-size: 14px;
-  }
-
-  .timeline a .nome {
-    display: none; /* no celular pequeno só mostra número */
-  }
-}
-
-/* --- Fontes globais --- */
-body {
-  font-family: "Titillium Web", sans-serif;
-  font-size: 18px; /* base */
-  line-height: 1.6;
-}
-
-/* Ajusta as boxes de título dos capítulos */
-.box8, .box10, .box12, .box14, .box17 {
-  background-color: #000;
-  width: 80%;
-  margin: 60px auto 20px auto; /* espaçamento automático */
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.box8 b, .box10 b, .box12 b, .box14 b, .box17 b {
-  font-family: "Zen Dots", sans-serif;
-  font-size: 24px;   /* menor que antes */
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Conteúdo das boxes de texto */
-.box9, .box11, .box13, .box15, .box18 {
-  width: 80%;
-  margin: 40px auto;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* Menu principal */
-.box {
-  background: #000;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;   /* permite quebrar linha no celular */
-  padding: 10px;
-}
-
-.box a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.box a.active {
-  border-bottom: 2px solid #fff;
-}
-
-/* Imagens dentro dos capítulos */
-.box9 img, .box11 img, .box13 img, .box15 img, .box18 img {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
-  display: block;
 }
 
